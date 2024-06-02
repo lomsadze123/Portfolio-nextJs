@@ -2,10 +2,12 @@ import ThreeScene from "@/components/three/ThreeScene";
 
 const Home = () => {
   return (
-    <div className="text-white">
-      <h1>Hello World!</h1>
-      <ThreeScene />
-    </div>
+    <main className="text-white pt-28 max-w-[1250px] mx-auto">
+      <section className="flex items-center justify-between">
+        <h1>Hello World!</h1>
+        <ThreeScene />
+      </section>
+    </main>
   );
 };
 

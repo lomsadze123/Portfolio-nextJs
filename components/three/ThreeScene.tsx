@@ -6,7 +6,7 @@ import Geometries from "./Geometries";
 
 const ThreeScene = () => {
   return (
-    <div className="row-span-1 row-start-1 -mt-9 aspect-square md:col-span-1 md:col-start-2 md:mt-0">
+    <div className="row-span-1 row-start-1 -mt-9 aspect-square md:col-span-1 md:col-start-2 md:mt-0 max-w-[650px] w-full h-full">
       <Canvas
         className="z-0"
         shadows

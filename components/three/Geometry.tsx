@@ -25,9 +25,6 @@ const Geometry = ({ r, position, geometry, materials }: ThreeTypes) => {
         z: `+=${gsap.utils.random(0, 2)}`,
         duration: 1.3,
         ease: "elastic.out(1,0.3)",
-        onComplete: () => {
-          mesh.material = getRandomMaterial();
-        },
       });
     }
   };
