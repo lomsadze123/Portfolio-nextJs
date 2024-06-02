@@ -6,7 +6,7 @@ const NavLink = ({ href, name }: { href: string; name: string }) => {
     <li>
       <Link
         href={href}
-        className="group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900"
+        className="group relative inline-block md:block overflow-hidden rounded px-3 py-1 text-3xl md:text-base font-bold text-slate-900"
       >
         <AnimateSpan path={href} />
         <span className="relative">{name}</span>
