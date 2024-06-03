@@ -3,6 +3,7 @@ import Link from "next/link";
 import MenuButton from "./MenuButton";
 import NavLink from "./NavLink";
 import useResize from "@/hooks/resize/useResize";
+import { ArrowIcon } from "../icons/Icons";
 
 const Navigation = () => {
   const { hide, setHide } = useResize();
@@ -33,19 +34,7 @@ const Navigation = () => {
             <span className="absolute inset-0 z-0 h-full bg-yellow-300 transition-transform duration-300 ease-in-out translate-y-9 lg:group-hover:translate-y-0"></span>
             <span className="relative flex items-center justify-center gap-2">
               Contact
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="inline-block"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
-              </svg>
+              <ArrowIcon />
             </span>
           </Link>
         </li>

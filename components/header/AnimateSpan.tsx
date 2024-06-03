@@ -1,4 +1,3 @@
-"use client";
 import { usePathname } from "next/navigation";
 
 const AnimateSpan = ({ path }: { path: string }) => {
