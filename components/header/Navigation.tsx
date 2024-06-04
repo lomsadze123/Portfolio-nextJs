@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return !hide ? (
     <nav
-      onClick={() => setHide(true)}
+      onClick={() => window.innerWidth < 768 && setHide(true)}
       className={`absolute top-0 left-0 bottom-0 right-0 bg-white z-10 text-right p-6 md:p-0 md:static md:bg-transparent md:text-left ${
         hide ? "" : "menu-enter"
       }`}
