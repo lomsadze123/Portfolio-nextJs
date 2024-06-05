@@ -45,7 +45,7 @@ const TechList = () => {
 
   return (
     <section ref={component}>
-      <ul className="tech-row mb-8 flex flex-wrap items-center justify-between gap-4 gap-x-20 -ml-96 text-slate-700 w-[4200px] overflow-hidden">
+      <ul className="tech-row mb-8 flex flex-wrap items-center justify-between gap-4 gap-x-20 -ml-[600px] text-slate-700 w-[4200px] overflow-hidden">
         {techStacks.map((stack, index) => (
           <li
             className="tech-item text-8xl font-extrabold uppercase tracking-tighter list-disc"
