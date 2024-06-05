@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 
 const AboutMe = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-start gap-6 md:gap-24">
+    <div className="max-w-[1250px] mx-auto flex flex-col-reverse md:flex-row justify-between items-start gap-6 md:gap-24">
       <div>
         <h1 className="font-bold leading-tight tracking-tight text-7xl md:text-9xl col-start-1">
           About Beka
