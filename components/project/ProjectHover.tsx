@@ -28,7 +28,7 @@ const ProjectHover = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const mousePos = { x: e.clientX, y: e.clientY };
+      const mousePos = { x: e.clientX, y: e.clientY + window.scrollY };
       const speed = Math.sqrt(Math.pow(mousePos.x - lastMousePos.current.x, 2));
 
       if (currentItem !== null) {

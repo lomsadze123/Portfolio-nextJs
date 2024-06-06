@@ -26,7 +26,7 @@ const projectsData = [
     image: Todo.src,
   },
   {
-    title: "Chat app",
+    title: "Chat App",
     tech: "React / Socket.io",
     image: Chat.src,
   },
