@@ -1,10 +1,12 @@
+import ContactComponent from "@/components/contact-component/ContactComponent";
+
 export const metadata = {
   title: "Contact - Beka Lomsadze",
-  description: "You can contact me from here",
+  description: "Get in touch with Beka Lomsadze",
 };
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return <ContactComponent />;
 };
 
 export default Contact;

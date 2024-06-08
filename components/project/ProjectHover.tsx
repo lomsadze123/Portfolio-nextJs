@@ -10,7 +10,7 @@ const ProjectHover = () => {
   const component = useRef(null);
   const [currentItem, setCurrentItem] = useState<null | number>(null);
   const revealRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef(null);
+  const textRef = useRef<Array<HTMLLIElement | null>>([]);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
   const onMouseEnter = (index: number, imageUrl: string) => {
@@ -73,7 +73,9 @@ const ProjectHover = () => {
         {projectsData.map((project, index) => (
           <li
             key={project.title}
-            ref={textRef}
+            ref={(element) => {
+              if (element) textRef.current[index] = element;
+            }}
             onMouseEnter={() => onMouseEnter(index, project.image)}
             onMouseLeave={onMouseLeave}
           >

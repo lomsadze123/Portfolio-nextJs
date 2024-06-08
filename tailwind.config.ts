@@ -16,6 +16,15 @@ const config: Config = {
           "radial-gradient(circle at top center, rgba(71, 120, 235, 0.5) 0%, transparent 50%, transparent 100%)",
       },
     },
+    keyframes: {
+      fadeInUp: {
+        "0%": { opacity: "0", transform: "scale(0.8)" },
+        "100%": { opacity: "1", transform: "scale(1)" },
+      },
+    },
+    animation: {
+      fadeInUp: "fadeInUp 1s ease-out forwards",
+    },
   },
   plugins: [],
 };
