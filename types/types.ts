@@ -30,3 +30,9 @@ export interface Project {
   gettingStarted?: Section[];
   technologies?: string[];
 }
+
+export interface ErrorState {
+  name: string;
+  email: string;
+  message: string;
+}

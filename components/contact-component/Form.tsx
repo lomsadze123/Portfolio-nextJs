@@ -1,25 +1,40 @@
 "use client";
-import { useState } from "react";
+import contactAction from "@/actions/contactAction";
+import { ErrorState } from "@/types/types";
+import { useRef, useState } from "react";
 
 const Form = () => {
-  const [formState, setFormState] = useState({
+  const [error, setError] = useState<ErrorState>({
     name: "",
     email: "",
     message: "",
   });
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormState({ ...formState, [name]: value });
+  const handleError = (err: any) => {
+    const updatedErrors = { name: "", email: "", message: "" };
+    err.forEach((error: any) => {
+      updatedErrors[error.path[0] as keyof ErrorState] = error.message;
+    });
+
+    setError(updatedErrors);
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // Handle form submission, e.g., send an email or save to a database
-    console.log("Form submitted:", formState);
-  };
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form
+      ref={formRef}
+      action={async (formData) => {
+        const response = await contactAction(formData);
+        if (response.errors) {
+          handleError(response.errors);
+        } else {
+          setError({ name: "", email: "", message: "" });
+          formRef.current?.reset();
+        }
+      }}
+      className="flex flex-col gap-6"
+      noValidate
+    >
       <div className="flex flex-col gap-2">
         <label htmlFor="name" className="text-lg">
           Name
@@ -28,11 +43,10 @@ const Form = () => {
           type="text"
           id="name"
           name="name"
-          value={formState.name}
-          onChange={handleChange}
           className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         />
+        <p className="text-red-500">{error.name}</p>
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="email" className="text-lg">
@@ -42,11 +56,10 @@ const Form = () => {
           type="email"
           id="email"
           name="email"
-          value={formState.email}
-          onChange={handleChange}
           className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         />
+        <p className="text-red-500">{error.email}</p>
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="message" className="text-lg">
@@ -55,12 +68,11 @@ const Form = () => {
         <textarea
           id="message"
           name="message"
-          value={formState.message}
-          onChange={handleChange}
           rows={6}
           className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         ></textarea>
+        <p className="text-red-500">{error.message}</p>
       </div>
       <button
         type="submit"
