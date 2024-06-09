@@ -2,6 +2,7 @@
 import contactAction from "@/actions/contactAction";
 import { ErrorState } from "@/types/types";
 import { useRef, useState } from "react";
+import { toast } from "react-toastify";
 
 const Form = () => {
   const [error, setError] = useState<ErrorState>({
@@ -28,6 +29,7 @@ const Form = () => {
         if (response.errors) {
           handleError(response.errors);
         } else {
+          toast("Email sent successfully !");
           setError({ name: "", email: "", message: "" });
           formRef.current?.reset();
         }

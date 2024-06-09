@@ -1,6 +1,7 @@
 "use server";
 
 import schema from "@/utils/zodValidate";
+import sendConfirmationEmail from "./sendEmail";
 
 const contactAction = async (formData: any) => {
   const name = formData.get("name").trim();
@@ -14,11 +15,10 @@ const contactAction = async (formData: any) => {
   });
 
   if (validateSchema.success) {
-    console.log(validateSchema.data);
+    await sendConfirmationEmail(validateSchema.data.email);
+
     return { message: "Form submitted successfully!" };
   } else {
-    console.log("i am in");
-
     return { errors: validateSchema.error.errors };
   }
 };

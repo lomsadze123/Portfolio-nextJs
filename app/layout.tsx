@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import CustomBg from "@/components/customBg/CustomBg";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Header />
+        <ToastContainer />
         <CustomBg />
         {children}
         <Footer />
