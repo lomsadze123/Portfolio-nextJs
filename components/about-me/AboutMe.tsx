@@ -12,7 +12,7 @@ const AboutMe = () => {
           Hey, I&apos;m Beka! Hailing from the heart of Georgia, my upbringing
           amidst its rich landscapes has fueled my love for all things creative.
           From the rolling hills to the vibrant city scenes, my roots run deep
-          in design and coding."
+          in design and coding.
           <br />
           <br />
           As a student at the Business and Technology University, I&apos;m
