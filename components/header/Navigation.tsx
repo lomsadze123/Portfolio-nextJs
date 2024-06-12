@@ -11,12 +11,15 @@ const Navigation = () => {
   return !hide ? (
     <nav
       onClick={() => window.innerWidth < 768 && setHide(true)}
-      className={`absolute top-0 left-0 bottom-0 right-0 bg-white z-10 text-right p-6 md:p-0 md:static md:bg-transparent md:text-left ${
+      className={`absolute top-0 left-0 bottom-0 right-0 bg-white z-10 text-right p-6 md:p-0 md:static md:bg-transparent md:text-left overflow-hidden ${
         hide ? "" : "menu-enter"
       }`}
     >
       <MenuButton hide={hide} setHide={setHide} />
-      <ul className="md:flex md:items-center md:gap-1">
+      <ul
+        onClick={() => window.innerWidth < 768 && setHide(true)}
+        className="md:flex md:items-center md:gap-1"
+      >
         <NavLink href="/about" name="About" />
         <span className="hidden text-4xl font-thin leading-[0] text-slate-400 md:inline">
           /
