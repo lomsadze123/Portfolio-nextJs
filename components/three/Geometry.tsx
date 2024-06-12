@@ -5,7 +5,13 @@ import { useRef, useState } from "react";
 import * as THREE from "three";
 import { gsap } from "gsap";
 
-const Geometry = ({ r, position, geometry, materials }: ThreeTypes) => {
+const Geometry = ({
+  r,
+  position,
+  geometry,
+  materials,
+  soundEffects,
+}: ThreeTypes) => {
   const meshRef = useRef<THREE.Group>(null);
   const [visible, setVisible] = useState(false);
 
@@ -18,6 +24,8 @@ const Geometry = ({ r, position, geometry, materials }: ThreeTypes) => {
   const handleClick = (e: any) => {
     const mesh = e.object as THREE.Mesh;
 
+    gsap.utils.random(soundEffects).play();
+
     if (mesh) {
       gsap.to(mesh.rotation, {
         x: `+=${gsap.utils.random(0, 2)}`,
@@ -26,6 +34,7 @@ const Geometry = ({ r, position, geometry, materials }: ThreeTypes) => {
         duration: 1.3,
         ease: "elastic.out(1,0.3)",
       });
+      mesh.material = getRandomMaterial();
     }
   };
 
@@ -52,11 +61,7 @@ const Geometry = ({ r, position, geometry, materials }: ThreeTypes) => {
 
   return (
     <group position={position} ref={meshRef}>
-      <Float
-        speed={5 * r}
-        rotation={new THREE.Euler(6 * r, 6 * r, 6 * r)}
-        floatIntensity={5 * r}
-      >
+      <Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
         <mesh
           geometry={geometry}
           onClick={handleClick}

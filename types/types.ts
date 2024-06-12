@@ -5,6 +5,7 @@ export interface ThreeTypes {
   position: [number, number, number];
   geometry: THREE.BufferGeometry;
   materials: THREE.Material[];
+  soundEffects: HTMLAudioElement[];
 }
 
 interface SubSection {

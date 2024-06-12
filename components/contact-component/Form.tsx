@@ -45,7 +45,7 @@ const Form = () => {
           type="text"
           id="name"
           name="name"
-          className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
+          className="p-2 outline-none rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         />
         <p className="text-red-500">{error.name}</p>
@@ -58,7 +58,7 @@ const Form = () => {
           type="email"
           id="email"
           name="email"
-          className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
+          className="p-2 outline-none rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         />
         <p className="text-red-500">{error.email}</p>
@@ -71,7 +71,7 @@ const Form = () => {
           id="message"
           name="message"
           rows={6}
-          className="p-2 rounded-md border border-slate-700 bg-slate-900 text-white"
+          className="p-2 outline-none rounded-md border border-slate-700 bg-slate-900 text-white"
           required
         ></textarea>
         <p className="text-red-500">{error.message}</p>

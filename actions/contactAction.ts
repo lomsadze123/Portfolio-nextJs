@@ -15,7 +15,10 @@ const contactAction = async (formData: any) => {
   });
 
   if (validateSchema.success) {
-    await sendConfirmationEmail(validateSchema.data.email);
+    await sendConfirmationEmail(
+      validateSchema.data.email,
+      validateSchema.data.message
+    );
 
     return { message: "Form submitted successfully!" };
   } else {

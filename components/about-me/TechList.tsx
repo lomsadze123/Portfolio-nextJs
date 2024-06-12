@@ -48,7 +48,7 @@ const TechList = () => {
       <ul className="tech-row mb-8 flex flex-wrap items-center justify-between gap-4 gap-x-20 -ml-[600px] text-slate-700 w-[4200px] overflow-hidden">
         {techStacks.map((stack, index) => (
           <li
-            className="tech-item text-8xl font-extrabold uppercase tracking-tighter list-disc"
+            className="tech-item text-5xl md:text-8xl font-extrabold uppercase tracking-tighter list-disc"
             key={Object.keys(stack)[0] + index}
             style={{ color: stack[Object.keys(stack)[0]] }}
           >
