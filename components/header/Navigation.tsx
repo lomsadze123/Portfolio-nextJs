@@ -16,10 +16,7 @@ const Navigation = () => {
       }`}
     >
       <MenuButton hide={hide} setHide={setHide} />
-      <ul
-        onClick={() => window.innerWidth < 768 && setHide(true)}
-        className="md:flex md:items-center md:gap-1"
-      >
+      <ul className="md:flex md:items-center md:gap-1">
         <NavLink href="/about" name="About" />
         <span className="hidden text-4xl font-thin leading-[0] text-slate-400 md:inline">
           /
