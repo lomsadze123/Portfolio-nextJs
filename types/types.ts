@@ -31,6 +31,10 @@ export interface Project {
   sections?: Section[];
   gettingStarted?: Section[];
   technologies?: string[];
+  links: {
+    github: string;
+    live: string;
+  };
 }
 
 export interface ErrorState {

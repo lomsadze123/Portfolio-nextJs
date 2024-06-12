@@ -4,6 +4,10 @@ const projectList = [
     technology: "Next.js",
     date: "Friday, December 1, 2023",
     introduction: `In the realm of creative development, where each line of code serves as a brushstroke on the canvas of digital artistry, I embarked on a journey to explore the potential of Next.js. The canvas for my latest endeavor? A CRUD (Create, Read, Update, Delete) note-taking application that not only serves as a practical tool but also stands as a testament to the boundless creativity web development can offer.`,
+    links: {
+      github: "https://github.com/lomsadze123/First-NextJs",
+      live: "https://first-next-js-rosy.vercel.app/",
+    },
     sections: [
       {
         heading: "The Birth of an Idea",
@@ -89,6 +93,10 @@ const projectList = [
     technology: "GraphQL, React",
     date: "Thursday, June 6, 2024",
     introduction: `The Supernova GraphQL React App is a sophisticated web application that leverages GraphQL for efficient data fetching and Apollo Client for robust state management. This project encompasses various features such as user authentication, a dynamic dashboard, comprehensive error handling, and token expiration management. Designed with modern web development techniques like lazy loading, context usage, and live streaming through subscriptions and WebSockets, the Supernova GraphQL React App offers an immersive and responsive user experience.`,
+    links: {
+      github: "https://github.com/lomsadze123/supernova-graphql-react-app",
+      live: "https://supernova-graphql-react-app.vercel.app/",
+    },
     sections: [
       {
         heading: "Overview",
@@ -216,6 +224,10 @@ const projectList = [
     title: "Audiophile Ecommerce Website",
     technology: "React",
     introduction: `Welcome to the Audiophile E-commerce Website! This project is a fully-functional e-commerce platform designed for selling premium audio products.`,
+    links: {
+      github: "https://github.com/lomsadze123/audiophile-ecommerce-website",
+      live: "https://audiophile-ecommerce-website-marteli.netlify.app/",
+    },
     technologies: [
       "React (with React Router)",
       "Tailwind CSS",
@@ -258,6 +270,10 @@ const projectList = [
     title: "Link Sharing App",
     technology: "React / Firebase",
     introduction: `This is a link-sharing application that allows users to add, edit, and manage their social media and other links. Users can also customize their profile details and share their profiles with others.`,
+    links: {
+      github: "https://github.com/lomsadze123/fullstack-link-sharing-app",
+      live: "https://link-sharing-app-c4c7b.web.app/",
+    },
     sections: [
       {
         heading: "Features",
@@ -365,6 +381,10 @@ const projectList = [
     title: "Chat App",
     technology: "React / socket.io",
     introduction: `This is a simple real-time chat application built using React for the frontend and Socket.io for the backend. It allows users to join chat rooms, send messages, and see messages from other users in real-time.`,
+    links: {
+      github: "https://github.com/lomsadze123/First-WebSocket",
+      live: "https://first-web-socket.vercel.app/",
+    },
     sections: [
       {
         heading: "Features",

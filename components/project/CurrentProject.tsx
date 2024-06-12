@@ -63,6 +63,24 @@ const CurrentProject = ({ project }: { project: Project }) => {
             ))}
           </ul>
         )}
+
+        <h4 className="mt-8 text-5xl text-white font-bold">Demo</h4>
+        <div className="ml-4 mt-4">
+          <a
+            className="text-blue-500 text-xl lg:hover:underline"
+            href={project.links.github}
+            target="_blank"
+          >
+            Github
+          </a>
+          <a
+            className="text-blue-500 text-xl ml-6 lg:hover:underline"
+            href={project.links.live}
+            target="_blank"
+          >
+            Live
+          </a>
+        </div>
       </div>
     </main>
   );
