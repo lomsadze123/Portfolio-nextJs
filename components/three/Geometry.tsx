@@ -1,7 +1,7 @@
 import { ThreeTypes } from "@/types/types";
 import { useGSAP } from "@gsap/react";
 import { Float } from "@react-three/drei";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { gsap } from "gsap";
 
@@ -11,6 +11,7 @@ const Geometry = ({
   geometry,
   materials,
   soundEffects,
+  delay,
 }: ThreeTypes) => {
   const meshRef = useRef<THREE.Group>(null);
   const [visible, setVisible] = useState(false);
@@ -46,9 +47,16 @@ const Geometry = ({
     document.body.style.cursor = "default";
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   useGSAP(() => {
-    setVisible(true);
-    meshRef.current &&
+    if (visible && meshRef.current) {
       gsap.from(meshRef.current.scale, {
         x: 0,
         y: 0,
@@ -57,7 +65,8 @@ const Geometry = ({
         ease: "elastic.out(1,0.3)",
         delay: 0.3,
       });
-  });
+    }
+  }, [visible]);
 
   return (
     <group position={position} ref={meshRef}>

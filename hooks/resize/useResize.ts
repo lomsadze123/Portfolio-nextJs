@@ -16,7 +16,6 @@ const useResize = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

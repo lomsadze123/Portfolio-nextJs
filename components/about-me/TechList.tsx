@@ -1,5 +1,5 @@
 "use client";
-import techStacks from "@/data/techStacks";
+import techStacks from "@/data/stacks/techStacks";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

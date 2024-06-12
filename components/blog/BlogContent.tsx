@@ -1,4 +1,4 @@
-import blogContent from "@/data/blogData";
+import blogContent from "@/data/blog/blogData";
 
 const BlogContent = () => {
   return (

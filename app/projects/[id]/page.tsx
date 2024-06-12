@@ -1,5 +1,5 @@
 import CurrentProject from "@/components/project/CurrentProject";
-import projects from "@/data/projectData";
+import projects from "@/data/project/projectData";
 
 const Project = ({ params }: { params: { id: string } }) => {
   const currentProject = projects.find(

@@ -1,8 +1,8 @@
-import Audiophile from "../assets/audio.webp";
-import LinkShare from "../assets/link-share.webp";
-import Graphql from "../assets/graphql.webp";
-import Todo from "../assets/todo.webp";
-import Chat from "../assets/chat.webp";
+import Audiophile from "../../assets/audio.webp";
+import LinkShare from "../../assets/link-share.webp";
+import Graphql from "../../assets/graphql.webp";
+import Todo from "../../assets/todo.webp";
+import Chat from "../../assets/chat.webp";
 
 const projectsData = [
   {

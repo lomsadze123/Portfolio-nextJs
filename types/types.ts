@@ -6,6 +6,7 @@ export interface ThreeTypes {
   geometry: THREE.BufferGeometry;
   materials: THREE.Material[];
   soundEffects: HTMLAudioElement[];
+  delay: number;
 }
 
 interface SubSection {

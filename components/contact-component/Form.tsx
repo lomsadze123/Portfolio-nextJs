@@ -1,25 +1,10 @@
 "use client";
 import contactAction from "@/actions/contactAction";
-import { ErrorState } from "@/types/types";
-import { useRef, useState } from "react";
+import useForm from "@/hooks/form/useForm";
 import { toast } from "react-toastify";
 
 const Form = () => {
-  const [error, setError] = useState<ErrorState>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const formRef = useRef<HTMLFormElement>(null);
-
-  const handleError = (err: any) => {
-    const updatedErrors = { name: "", email: "", message: "" };
-    err.forEach((error: any) => {
-      updatedErrors[error.path[0] as keyof ErrorState] = error.message;
-    });
-
-    setError(updatedErrors);
-  };
+  const { error, setError, formRef, handleError } = useForm();
 
   return (
     <form

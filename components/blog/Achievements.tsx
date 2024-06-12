@@ -1,4 +1,4 @@
-import achievements from "@/data/achievementsData";
+import achievements from "@/data/blog/achievementsData";
 
 const Achievements = () => {
   return (

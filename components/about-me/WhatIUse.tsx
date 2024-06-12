@@ -11,19 +11,16 @@ const WhatIUse = () => {
       <Achievements
         title="Experience"
         job="Fullstack (MERN) Developer"
-        time="2019 - Present"
-        place="Google"
-        review="Led the design team in creating visually stunning and interactive web
-        experiences. Implemented cutting-edge UI/UX designs, collaborated with
-        developers to bring concepts to life, and ensured brand consistency
-        across digital platforms."
+        time="2024 - Present"
+        place="Brain House"
+        review="One standout project is the driver's license application I'm leading at Bain House. This platform enables users to purchase practice test videos and monitor their progress, unlocking new content upon achieving milestones. My responsibilities span both frontend and backend development. A key challenge involved implementing robust authorization and authentication mechanisms, for which I utilized Google Cloud and PassportJS.."
       />
       <Achievements
         title="Education"
         job="Bachelor of Information Technology"
         time="2020 - 2025"
         place="BTU"
-        review="Pursued a Master's degree in Human-Computer Interaction, specializing in designing user-friendly interfaces and conducting user research. Gained expertise in creating seamless digital experiences that prioritize user needs and preferences."
+        review=" I have focused on building a strong foundation in computer science, emphasizing programming fundamentals, deep learning algorithms, and core computer science principles."
       />
     </div>
   );
