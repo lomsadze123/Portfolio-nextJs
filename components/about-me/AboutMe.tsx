@@ -9,23 +9,24 @@ const AboutMe = () => {
           About Beka
         </h1>
         <p className="prose prose-xl prose-slate prose-invert col-start-1 text-xl mt-6">
-          Hey, I'm Beka! I grew up in the Pacific Northwest and love all things
-          creative. From the misty forests to the vibrant city streets, my
-          surroundings have always fueled my passion for design and coding.
+          Hey, I&apos;m Beka! I grew up in the Pacific Northwest and love all
+          things creative. From the misty forests to the vibrant city streets,
+          my surroundings have always fueled my passion for design and coding.
           <br />
           <br />
-          As a student at the Business and Technology University, I'm pursuing a
-          degree in Information Technology. I focus on building a strong
-          foundation in computer science, emphasizing programming fundamentals,
-          deep learning algorithms, and core computer science principles.
+          As a student at the Business and Technology University, I&apos;m
+          pursuing a degree in Information Technology. I focus on building a
+          strong foundation in computer science, emphasizing programming
+          fundamentals, deep learning algorithms, and core computer science
+          principles.
           <br />
           <br />
-          When I'm not coding, you'll find me experimenting with digital art or
-          exploring the latest in web animation.
+          When I&apos;m not coding, you&apos;ll find me experimenting with
+          digital art or exploring the latest in web animation.
           <br />
           <br />
-          Join me as I continue to push the boundaries of what's possible in the
-          digital world!
+          Join me as I continue to push the boundaries of what&apos;s possible
+          in the digital world!
         </p>
         <a href="./Beka Lomsadze.pdf">
           <button className="group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 mt-6 px-4 py-2 font-bold transition-transform ease-out hover:scale-105">

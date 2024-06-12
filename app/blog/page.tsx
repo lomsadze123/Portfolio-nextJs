@@ -15,7 +15,7 @@ const Blog = () => {
       </h1>
       <p className="text-xl mb-8">
         Discover the resources and steps I took to learn programming. From
-        beginner tutorials to advanced frameworks, here's how I became a
+        beginner tutorials to advanced frameworks, here&apos;s how I became a
         developer.
       </p>
       <BlogContent />
