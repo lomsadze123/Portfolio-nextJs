@@ -9,9 +9,10 @@ const AboutMe = () => {
           About Beka
         </h1>
         <p className="prose prose-xl prose-slate prose-invert col-start-1 text-xl mt-6">
-          Hey, I&apos;m Beka! I grew up in the Pacific Northwest and love all
-          things creative. From the misty forests to the vibrant city streets,
-          my surroundings have always fueled my passion for design and coding.
+          Hey, I&apos;m Beka! Hailing from the heart of Georgia, my upbringing
+          amidst its rich landscapes has fueled my love for all things creative.
+          From the rolling hills to the vibrant city scenes, my roots run deep
+          in design and coding."
           <br />
           <br />
           As a student at the Business and Technology University, I&apos;m
